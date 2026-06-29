@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ICNNX-2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#002147',
+                            blueLight: '#1e3a8a',
+                            orange: '#ea580c',
+                            slateBg: '#f8fafc',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>.animate-spin-slow { animation: spin 25s linear infinite; }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+        .animate-spin-slow { animation: spin 25s linear infinite; }
+        .glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .gradient-btn { background: linear-gradient(135deg, #ea580c 0%, #d97706 100%); transition: all 0.3s ease; }
+        .gradient-btn:hover { background: linear-gradient(135deg, #c2410c 0%, #b45309 100%); transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.3); }
+    
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="bg-brand-slateBg font-sans text-slate-800 overflow-x-hidden">
+
+    <header class="bg-white shadow-md z-50">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-row items-center justify-center gap-4 sm:gap-6 text-center">
+            <div class="relative group flex-shrink-0">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-orange to-brand-gold rounded-full blur opacity-30 animate-pulse"></div>
+                <div class="relative bg-white rounded-full p-0.5">
+                    <img src="view.jpg" alt="Vignan's Institute Logo" class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-sm">
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center">
+                <img src="header.png" alt="Vignan's Institute of Engineering for Women - Autonomous, NAAC A+ Banner" class="max-w-full h-auto max-h-[80px] sm:max-h-[105px] object-contain rounded-lg">
+            </div>
+        </div>
+
+        <div class="bg-brand-navy border-b-2 border-brand-orange sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2.5 lg:py-0">
+                <div class="flex lg:hidden justify-end w-full">
+                    <button id="menu-toggle" class="text-white hover:text-brand-orange p-1.5 rounded-md transition-colors">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+
+                <nav id="nav-menu" class="hidden lg:flex flex-col lg:flex-row items-center gap-1 xl:gap-2 w-full justify-start text-white">
+                    <a href="index.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Home</a>
+                    <a href="about.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">About</a>
+                    <a href="commitee.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Committee</a>
+                    <a href="tracks.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Tracks</a>
+                    <a href="dates.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Dates</a>
+                    <a href="papers.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Papers</a>
+                    <a href="submissions.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Submission</a>
+                    <a href="schedule.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Schedule</a>
+                    <a href="registration-details.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Register</a>
+                    
+                    <a href="contact.html" class="bg-brand-orange text-white font-bold px-4 py-4 text-[14px] transition-all">Contact</a>
+                    
+                    <div class="ml-auto py-2">
+                        <a href="registration.html" class="gradient-btn text-white font-bold px-5 py-2 rounded-lg text-[13px] uppercase tracking-wider shadow block">Register Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-navy border-t border-brand-navy/40 py-2 px-4 flex flex-col gap-1 shadow-inner text-white">
+            <a href="index.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Home</a>
+            <a href="about.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">About</a>
+            <a href="commitee.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Committee</a>
+            <a href="tracks.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Tracks</a>
+            <a href="dates.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Dates</a>
+            <a href="papers.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Papers</a>
+            <a href="submissions.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Submission</a>
+            <a href="schedule.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Schedule</a>
+            <a href="registration-details.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Register</a>
+           
+            <a href="contact.html" class="bg-brand-orange font-bold px-3 py-2 rounded-md block">Contact</a>
+            <a href="registration.html" class="gradient-btn text-white text-center font-bold px-4 py-2.5 rounded-lg text-xs block mt-2">Register Now</a>
+        </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <div class="text-center mb-16">
+            <p class="text-brand-orange font-bold text-sm tracking-widest uppercase mb-1">Get In Touch</p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading">Connect with ICNNX-2026</h1>
+            <div class="w-24 h-1 bg-gradient-to-r from-brand-navy to-brand-orange mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+            
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col justify-between hover:shadow-md transition duration-300">
+                <div>
+                    <div class="w-14 h-14 bg-orange-100 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 shadow-sm">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy font-heading mb-3">Conference Desk</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">For paper submission matrices, review evaluations, or registration tracking queries.</p>
+                </div>
+                <div class="space-y-2 border-t pt-4 border-slate-50 text-sm font-medium">
+                    <p class="text-slate-700 break-all">Email: <a href="mailto:conference@icnn2026.edu.in" class="text-brand-orange hover:underline">conference@icnn2026.edu.in</a></p>
+                    <p class="text-slate-700">Phone: <a href="tel:+918790256726" class="text-brand-orange hover:underline">+91-8790256726</a></p>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col justify-between hover:shadow-md transition duration-300">
+                <div>
+                    <div class="w-14 h-14 bg-blue-50 text-brand-navy rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 shadow-sm">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy font-heading mb-3">Institutional Channel</h3>
+                    <p class="text-slate-500 text-sm mb-6 leading-relaxed">For baseline campus authorizations, institutional sponsorship alignment, or department outreach.</p>
+                </div>
+                <div class="space-y-2 border-t pt-4 border-slate-50 text-sm font-medium">
+                    <p class="text-slate-700 break-all">Web: <a href="http://view.edu.in" target="_blank" class="text-brand-navy hover:underline">view.edu.in</a></p>
+
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm text-center flex flex-col justify-between hover:shadow-md transition duration-300">
+                <div>
+                    <div class="w-14 h-14 bg-orange-100 text-brand-orange rounded-2xl flex items-center justify-center text-2xl mx-auto mb-6 shadow-sm">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-navy font-heading mb-3">Venue Desk Address</h3>
+                    <p class="text-slate-500 text-sm mb-4 leading-relaxed">Vignan's Institute of Engineering for Women</p>
+                </div>
+                <p class="text-slate-600 text-xs sm:text-sm border-t pt-4 border-slate-50 font-medium leading-relaxed text-left px-2">
+                    Vignan's Institute of Engineering for women,<br>
+                    Kapujaggaraju Peta, Gajuwaka,<br>
+                    Visakhapatnam, Andhra Pradesh - 530049, India.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="bg-white p-4 rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+            <div style="width:100%; height:380px; overflow:hidden; border-radius:20px;" class="shadow-inner">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5979603812034!2d83.17423757487576!3d17.71644259324292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968b80a531cb7%3A0xe76b039512ff9e79!2sVignan's%20Institute%20of%20Engineering%20for%20Women!5e0!3m2!1sen!2sin!4v1769660579814!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-full">
+        <div class="bg-brand-navy text-white pt-16 pb-8 border-t-4 border-brand-orange">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+                <div class="footer-col text-slate-300 text-sm">
+                    <h4 class="text-brand-orange font-bold text-lg mb-4 flex items-center gap-2"><ion-icon name="map-outline"></ion-icon> Location Map</h4>
+                    <div style="width:100%; height:200px; overflow:hidden; border-radius:12px;" class="shadow border border-slate-700/50">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.5979603812034!2d83.17423757487576!3d17.71644259324292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3968b80a531cb7%3A0xe76b039512ff9e79!2sVignan's%20Institute%20of%20Engineering%20for%20Women!5e0!3m2!1sen!2sin!4v1769660579814!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="footer-col text-slate-300 text-sm" id="contact">
+                    <h4 class="text-brand-orange font-bold text-lg mb-4 flex items-center gap-2"><ion-icon name="call-outline"></ion-icon> Contact Us</h4>
+                    <p class="mb-2">For any conference queries regarding submissions, reach our secretariat desk:</p>
+                    <p class="font-bold text-white text-base mb-1">+91-8790256726</p>
+                    <p class="mb-4"><strong>Email:</strong> conference@icnn2026.edu.in</p>
+                    <div class="flex gap-3 text-lg">
+                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-linkedin"></ion-icon></a>
+                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-instagram"></ion-icon></a>
+                    </div>
+                </div>
+                <div class="footer-col text-slate-300 text-sm">
+                    <h4 class="text-brand-orange font-bold text-lg mb-4 flex items-center gap-2"><ion-icon name="location-outline"></ion-icon> Venue Desk</h4>
+                    <p class="font-bold text-white mb-1">Vignan's Institute of Engineering for Women</p>
+                    <p>Kapujaggaraju Peta, Gajuwaka,</p>
+                    <p class="mb-2">Visakhapatnam, Andhra Pradesh - 530049</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 text-center text-xs text-slate-400">
+                © 2026 ICNNX Conference | Vignan's Institute of Engineering for Women. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if(mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = "fa-solid fa-bars text-xl";
+            } else {
+                menuIcon.className = "fa-solid fa-xmark text-xl";
+            }
+        });
+    </script>
+</body>
+</html>
