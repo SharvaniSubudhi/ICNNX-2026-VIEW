@@ -34,8 +34,32 @@
         .glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
         .gradient-btn { background: linear-gradient(135deg, #ea580c 0%, #d97706 100%); transition: all 0.3s ease; }
         .gradient-btn:hover { background: linear-gradient(135deg, #c2410c 0%, #b45309 100%); transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(234, 88, 12, 0.3); }
+        
+        /* Custom Overrides for Owl Carousel Navigation Theme styling */
+        .owl-theme .owl-nav [class*='owl-'] {
+            background: #002147 !important;
+            color: #fff !important;
+            border-radius: 9999px !important;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .owl-theme .owl-nav [class*='owl-']:hover {
+            background: #ea580c !important;
+        }
+        .owl-theme .owl-dots .owl-dot.active span {
+            background: #002147 !important;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- OWL CAROUSEL CORE & THEME STYLESHEETS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
@@ -43,7 +67,6 @@
 
     <!-- MASTER BRANDING & NAVIGATION HEADER CONTAINER -->
      <header class="bg-white shadow-md z-50">
-        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-row items-center justify-center gap-4 sm:gap-6 text-center">
             <div class="relative group flex-shrink-0">
                 <div class="absolute -inset-1 bg-gradient-to-r from-brand-orange to-brand-gold rounded-full blur opacity-30 animate-pulse"></div>
@@ -51,9 +74,8 @@
                     <img src="view.jpg" alt="Vignan's Institute Logo" class="w-14 h-14 sm:w-20 sm:h-20 rounded-full object-cover shadow-sm">
                 </div>
             </div>
-            
             <div class="flex items-center justify-center">
-                <img src="header.png" alt="Vignan's Institute of Engineering for Women - Autonomous, NAAC A+ Banner" class="max-w-full h-auto max-h-[80px] sm:max-h-[105px] object-contain rounded-lg">
+                <img src="header.png" alt="Vignan's Institute of Engineering for Women Banner" class="max-w-full h-auto max-h-[80px] sm:max-h-[105px] object-contain rounded-lg">
             </div>
         </div>
 
@@ -78,29 +100,12 @@
                     <a href="contact.html" class="font-semibold hover:bg-white/10 hover:text-brand-orange px-4 py-4 text-[14px] transition-all">Contact</a>
                     
                     <div class="ml-auto py-2">
-                        <a href="registration.html" class="gradient-btn text-white font-bold px-5 py-2 rounded-lg text-[13px] uppercase tracking-wider shadow block">Register Now</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzEI7l6ol48jXHARV0buuiZM6G9tOJIPqBTI15mgbgnyp57w/viewform" class="gradient-btn text-white font-bold px-5 py-2 rounded-lg text-[13px] uppercase tracking-wider shadow block">Register Now</a>
                     </div>
                 </nav>
             </div>
         </div>
-
-        <div id="mobile-menu" class="hidden lg:hidden bg-brand-navy border-t border-brand-navy/40 py-2 px-4 flex flex-col gap-1 shadow-inner text-white">
-            <a href="index.html" class="bg-brand-orange font-bold px-3 py-2 rounded-md block">Home</a>
-            <a href="about.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">About</a>
-            <a href="commitee.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Committee</a>
-            <a href="tracks.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Tracks</a>
-            <a href="dates.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Dates</a>
-            <a href="papers.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Papers</a>
-            <a href="submissions.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Submission</a>
-            <a href="schedule.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Schedule</a>
-            <a href="registration-details.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Register</a>
-            <a href="contact.html" class="font-semibold hover:text-brand-orange px-3 py-2 rounded-md block">Contact</a>
-            <a href="registration.html" class="gradient-btn text-white text-center font-bold px-4 py-2.5 rounded-lg text-xs block mt-2">Register Now</a>
-        </div>
     </header>
-
-    <!-- CONFERENCE EVENT POSTER SECTION -->
-    
 
     <!-- HERO SECTION -->
     <section class="relative overflow-hidden min-h-[85vh] bg-slate-900 flex items-center py-20">
@@ -179,40 +184,174 @@
         </div>
     </section>
 
-    <!-- ADVISORY TRACK LIST OVERVIEW -->
+    <!-- ORGANIZING COMMITTEE SECTION (UPDATED WITH THEME-BLUE BORDERS) -->
     <section class="py-20 bg-brand-slateBg border-t">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading mb-12">Organizing Committee</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-2xl border text-center hover:shadow-md transition">
-                    <img src="Dr. Lavu Rathaiha.jpg" alt="Chief Patron" class="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-2 border-brand-orange">
-                    <h3 class="text-brand-navy font-bold text-lg">Dr. Lavu Rathaiah</h3>
-                    <p class="text-slate-500 font-semibold text-xs uppercase">Chief Patron | Chairman, Vignan Group</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading text-center mb-12">Organizing Committee</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Chief Patron Card -->
+                <div class="bg-white rounded-2xl shadow-sm border-t-4 border-brand-navy border-x border-b border-brand-blueLight/30 p-6 flex flex-col min-h-[280px]">
+                    <h3 class="text-brand-navy font-bold text-xl text-center pb-3 border-b border-slate-100">Chief Patron</h3>
+                    <div class="flex items-center gap-4 mt-8">
+                        <img src="Dr. Lavu Rathaiha.jpg" alt="Dr. Lavu Rathaiah" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                        <div>
+                            <h4 class="text-slate-900 font-bold text-base">Dr. Lavu Rathaiah</h4>
+                            <p class="text-slate-500 text-sm mt-0.5">Chairman, Vignan Group</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border text-center hover:shadow-md transition">
-                    <img src="Devarayalu.jpg" alt="Patron" class="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-2 border-brand-orange">
-                    <h3 class="text-brand-navy font-bold text-lg">Sri. L. Srikrishnadevarayalu</h3>
-                    <p class="text-slate-500 font-semibold text-xs uppercase">Patron | M.P. & Vice-Chairman</p>
+
+                <!-- Patrons Card -->
+                <div class="bg-white rounded-2xl shadow-sm border-t-4 border-brand-navy border-x border-b border-brand-blueLight/30 p-6 flex flex-col min-h-[280px]">
+                    <h3 class="text-brand-navy font-bold text-xl text-center pb-3 border-b border-slate-100">Patrons</h3>
+                    <div class="flex flex-col gap-6 mt-6">
+                        <div class="flex items-center gap-4">
+                            <img src="Devarayalu.jpg" alt="Sri. L. Srikrishnadevarayalu" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-base">Sri. L. Srikrishnadevarayalu</h4>
+                                <p class="text-slate-500 text-sm mt-0.5">M.P. & Vice-Chairman</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="srikant.webp" alt="Sri. N. Srikant" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                            <div>
+                                <h4 class="text-slate-900 font-bold text-base">Sri. N. Srikant</h4>
+                                <p class="text-slate-500 text-sm mt-0.5">CEO, Vignan Visakhapatnam</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border text-center hover:shadow-md transition">
-                    <img src="Vprincipal.jpeg" alt="Co-Patron" class="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-2 border-brand-orange">
-                    <h3 class="text-brand-navy font-bold text-lg">Dr. B. Arundhati</h3>
-                    <p class="text-slate-500 font-semibold text-xs uppercase">Co-Patron | Principal, VIEW</p>
+
+                <!-- Co-Patron Card -->
+                <div class="bg-white rounded-2xl shadow-sm border-t-4 border-brand-navy border-x border-b border-brand-blueLight/30 p-6 flex flex-col min-h-[280px]">
+                    <h3 class="text-brand-navy font-bold text-xl text-center pb-3 border-b border-slate-100">Co-Patron</h3>
+                    <div class="flex items-center gap-4 mt-8">
+                        <img src="Vprincipal.jpeg" alt="Dr. B. Arundhati" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                        <div>
+                            <h4 class="text-slate-900 font-bold text-base">Dr. B. Arundhati</h4>
+                            <p class="text-slate-500 text-sm mt-0.5">Principal, VIEW</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border text-center hover:shadow-md transition">
-                    <img src="LaxmiLydiamam.jpeg" alt="Convenor" class="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-2 border-brand-orange">
-                    <h3 class="text-brand-navy font-bold text-lg">Dr. E. Laxmi Lydia</h3>
-                    <p class="text-slate-500 font-semibold text-xs uppercase">Convenor | Professor & Dean R&D</p>
+
+                <!-- Convenor Card -->
+                <div class="bg-white rounded-2xl shadow-sm border-t-4 border-brand-navy border-x border-b border-brand-blueLight/30 p-6 flex flex-col min-h-[220px]">
+                    <h3 class="text-brand-navy font-bold text-xl text-center pb-3 border-b border-slate-100">Convenor</h3>
+                    <div class="flex items-center gap-4 mt-8">
+                        <img src="LaxmiLydiamam.jpeg" alt="Dr. E. Laxmi Lydia" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                        <div>
+                            <h4 class="text-slate-900 font-bold text-base">Dr. E. Laxmi Lydia</h4>
+                            <p class="text-slate-500 text-sm mt-0.5">Professor & Dean R&D</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border text-center hover:shadow-md transition">
-                    <img src="csehod.jpg" alt="Coordinator" class="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-2 border-brand-orange">
-                    <h3 class="text-brand-navy font-bold text-lg">Dr. P. Vijaya Bharati</h3>
-                    <p class="text-slate-500 font-semibold text-xs uppercase">Coordinator | Professor & HoD, CSE</p>
+
+                <!-- Coordinator Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm border-t-4 border-brand-navy border-x border-b border-brand-blueLight/30 p-6 flex flex-col min-h-[220px]">
+                    <h3 class="text-brand-navy font-bold text-xl text-center pb-3 border-b border-slate-100">Coordinator</h3>
+                    <div class="flex items-center gap-4 mt-8">
+                        <img src="csehod.jpg" alt="Dr. P. Vijaya Bharati" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                        <div>
+                            <h4 class="text-slate-900 font-bold text-base">Dr. P. Vijaya Bharati</h4>
+                            <p class="text-slate-500 text-sm mt-0.5">Professor & HoD, CSE</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-2xl border text-center hover:shadow-md transition">
-                    <img src="Acse_Hod.jpeg" alt="Coordinator" class="w-40 h-40 object-cover rounded-full mx-auto mb-4 border-2 border-brand-orange">
-                    <h3 class="text-brand-navy font-bold text-lg">Dr. R. Manoj Kumar</h3>
-                    <p class="text-slate-500 font-semibold text-xs uppercase">Coordinator | Associate Professor & HoD, ACSE</p>
+
+                <!-- Coordinator Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm border-t-4 border-brand-navy border-x border-b border-brand-blueLight/30 p-6 flex flex-col min-h-[220px]">
+                    <h3 class="text-brand-navy font-bold text-xl text-center pb-3 border-b border-slate-100">Coordinator</h3>
+                    <div class="flex items-center gap-4 mt-8">
+                        <img src="Acse_Hod.jpeg" alt="Dr.R.Manoj Kumar" class="w-24 h-24 object-cover rounded-xl border border-brand-blueLight/50 shadow-sm flex-shrink-0">
+                        <div>
+                            <h4 class="text-slate-900 font-bold text-base">Dr.R.Manoj Kumar</h4>
+                            <p class="text-slate-500 text-sm mt-0.5">Associate Professor & HoD, ACSE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GLIMPSES OF RESEARCH CONCLAVE SECTION WITH CAROUSEL -->
+    <section class="py-16 bg-white border-t border-brand-blueLight/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy font-heading mt-2 mb-2">Glimpses of Research Conclave</h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    <b>Organized By:</b> Department of Computer Science Engineering and Advanced Computer Science Engineering
+                </p>
+            </div>
+
+            <!-- Video Player Box Container -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl border border-brand-blueLight/20 bg-black">
+                    <iframe 
+                        src="https://www.youtube.com/embed/F1olpeslGTg?rel=0" 
+                        title="YouTube video player" 
+                        class="absolute top-0 left-0 w-full h-full border-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Owl Carousel Structure Wrap -->
+            <div class="owl-carousel owl-theme max-w-7xl mx-auto px-4">
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(0)">
+                    <img src="pic0.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(1)">
+                    <img src="pic1.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(2)">
+                    <img src="pic2.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(3)">
+                    <img src="pic01.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(4)">
+                    <img src="pic02.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(5)">
+                    <img src="pic3.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(6)">
+                    <img src="pic03.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(7)">
+                    <img src="pic4.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(8)">
+                    <img src="pic5.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(9)">
+                    <img src="pic6.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(10)">
+                    <img src="pic7.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(11)">
+                    <img src="pic8.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(12)">
+                    <img src="pic9.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(13)">
+                    <img src="pic10.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(14)">
+                    <img src="pic11.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(15)">
+                    <img src="pic12.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(16)">
+                    <img src="pic13.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-sm border border-brand-blueLight/20 aspect-[4/3.3] bg-white group cursor-pointer" onclick="openGallery(17)">
+                    <img src="pic14.jpeg" alt="conclave" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                 </div>
             </div>
         </div>
@@ -233,39 +372,59 @@
                     <p class="mb-2">For any conference queries regarding submissions, reach our secretariat desk:</p>
                     <p class="font-bold text-white text-base mb-1">+91-8790256726</p>
                     <p class="mb-4"><strong>Email:</strong> conference@icnn2026.edu.in</p>
-                    <div class="flex gap-3 text-lg">
-                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-linkedin"></ion-icon></a>
-                        <a href="#" class="hover:text-brand-orange transition"><ion-icon name="logo-instagram"></ion-icon></a>
-                    </div>
                 </div>
                 <div class="footer-col text-slate-300 text-sm">
                     <h4 class="text-brand-orange font-bold text-lg mb-4 flex items-center gap-2"><ion-icon name="location-outline"></ion-icon> Venue Desk</h4>
                     <p class="font-bold text-white mb-1">Vignan's Institute of Engineering for Women</p>
-                    <p>Kapujaggaraju Peta, Gajuwaka,</p>
-                    <p class="mb-2">Visakhapatnam, Andhra Pradesh - 530049</p>
+                    <p>Kapujaggaraju Peta, Gajuwaka, Visakhapatnam - 530049</p>
                 </div>
-            </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 text-center text-xs text-slate-400">
-                © 2026 ICNNX Conference | Vignan's Institute of Engineering for Women. All rights reserved.
             </div>
         </div>
     </footer>
 
+    <!-- JQUERY & OWL CAROUSEL LOGICAL SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 16,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                navText: ["<i class='fa-solid fa-chevron-left'></i>", "<i class='fa-solid fa-chevron-right'></i>"],
+                responsive: {
+                    0: { items: 1 },
+                    640: { items: 2 },
+                    1024: { items: 4 }
+                }
+            });
+        });
+
+        // Mobile responsive navbar toggle menu utility script
         const menuToggle = document.getElementById('menu-toggle');
         const menuIcon = document.getElementById('menu-icon');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuToggle.addEventListener('click', () => {
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-                menuIcon.className = "fa-solid fa-xmark text-xl";
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuIcon.className = "fa-solid fa-bars text-xl";
-            }
-        });
+        if(menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.className = "fa-solid fa-xmark text-xl";
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.className = "fa-solid fa-bars text-xl";
+                }
+            });
+        }
+        
+        // Placeholder function to prevent runtime reference errors if openGallery is fired
+        function openGallery(index) {
+            console.log("Gallery view requesting item index: " + index);
+        }
     </script>
 </body>
 </html>
