@@ -1,4 +1,5 @@
 **Welcome to ICNNX-2026**
+
 ICNNX-2026 is envisioned as a premier global platform that brings together researchers, academicians, industry professionals, innovators, and students to explore the convergence of next-generation technologies shaping the future.
 
 The conference focuses on the integration of Artificial Intelligence, Quantum Computing, and Human-Centered Technologies, emphasizing interdisciplinary research that addresses complex real-world challenges and fosters meaningful collaboration between academia and industry.
