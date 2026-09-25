@@ -94,7 +94,7 @@
     </header>
 
     <!-- MAIN REASON AREA -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         <!-- Header Text Section -->
         <div class="text-center mb-12">
@@ -103,39 +103,59 @@
             <div class="w-16 h-1 bg-gradient-to-r from-brand-navy to-brand-orange mx-auto mt-3 rounded-full"></div>
         </div>
 
-        <!-- Pricing Table Wrapper -->
-        <div class="bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden mb-8">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-brand-navy text-white text-sm sm:text-base">
-                            <th class="p-4 sm:p-5 font-heading font-semibold tracking-wide">Registration Category</th>
-                            <th class="p-4 sm:p-5 font-heading font-semibold tracking-wide text-right">Registration Cost</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100 text-sm sm:text-base">
-                        <tr class="hover:bg-slate-50/70 transition">
-                            <td class="p-4 sm:p-5 text-slate-700 font-medium">Authors (Academic)-Offline</td>
-                            <td class="p-4 sm:p-5 text-right font-bold text-brand-navy">₹12,000</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50/70 transition">
-                            <td class="p-4 sm:p-5 text-slate-700 font-medium">Authors (Academic)-Online</td>
-                            <td class="p-4 sm:p-5 text-right font-bold text-brand-navy">₹10,000</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50/70 transition">
-                            <td class="p-4 sm:p-5 text-slate-700 font-medium">Authors (Industry)</td>
-                            <td class="p-4 sm:p-5 text-right font-bold text-brand-navy">₹6,000</td>
-                        </tr>
-                        <tr class="bg-amber-50/40 hover:bg-amber-50 transition">
-                            <td class="p-4 sm:p-5 text-slate-600 text-xs sm:text-sm italic">
-                                <span class="font-semibold text-brand-orange not-italic block sm:inline mr-1">Extra Page Charges:</span>
-                                Per page beyond 12 pages
-                            </td>
-                            <td class="p-4 sm:p-5 text-right font-bold text-brand-orange">₹1,000</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- 2-Column Grid Wrapper -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-8">
+            
+            <!-- Left Side: Pricing Table -->
+            <div class="lg:col-span-2 bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-brand-navy text-white text-sm sm:text-base">
+                                <th class="p-4 sm:p-5 font-heading font-semibold tracking-wide">Registration Category</th>
+                                <th class="p-4 sm:p-5 font-heading font-semibold tracking-wide text-right">Registration Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 text-sm sm:text-base">
+                            <tr class="hover:bg-slate-50/70 transition">
+                                <td class="p-4 sm:p-5 text-slate-700 font-medium">Authors (Academic)-Offline</td>
+                                <td class="p-4 sm:p-5 text-right font-bold text-brand-navy">₹12,000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/70 transition">
+                                <td class="p-4 sm:p-5 text-slate-700 font-medium">Authors (Academic)-Online</td>
+                                <td class="p-4 sm:p-5 text-right font-bold text-brand-navy">₹10,000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/70 transition">
+                                <td class="p-4 sm:p-5 text-slate-700 font-medium">Authors (Industry)</td>
+                                <td class="p-4 sm:p-5 text-right font-bold text-brand-navy">₹6,000</td>
+                            </tr>
+                            <tr class="bg-amber-50/40 hover:bg-amber-50 transition">
+                                <td class="p-4 sm:p-5 text-slate-600 text-xs sm:text-sm italic">
+                                    <span class="font-semibold text-brand-orange not-italic block sm:inline mr-1">Extra Page Charges:</span>
+                                    Per page beyond 12 pages
+                                </td>
+                                <td class="p-4 sm:p-5 text-right font-bold text-brand-orange">₹1,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <!-- Right Side: Payment Scanner Box -->
+            <div class="bg-white p-6 rounded-2xl shadow-md border border-slate-100 text-center flex flex-col items-center">
+                <div class="w-full bg-brand-navy text-white py-2 px-4 rounded-lg font-heading font-bold text-sm tracking-wide mb-4 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-qrcode text-brand-orange"></i> Payment Scanner
+                </div>
+                
+                <!-- QR Code Image Placeholder -->
+                <div class="p-3 bg-white border-2 border-dashed border-slate-200 rounded-xl shadow-inner mb-4 inline-block">
+                    <img src="payment-scanner.png" alt="Payment QR Code Scanner" class="w-48 h-48 sm:w-52 sm:h-52 object-contain mx-auto rounded-lg">
+                </div>
+
+                <p class="text-brand-orange font-bold text-base mb-1">Please Pay Here</p>
+                <p class="text-xs text-slate-500">Scan the QR code using any UPI app (GPay, PhonePe, Paytm) to complete your fee payment.</p>
+            </div>
+
         </div>
 
     </main>
